@@ -80,7 +80,7 @@ function Profile() {
                 </div>
             </div> :
             <div
-                className='noOrders'    
+                className='information'    
             >
                 <Info
                     title={'У вас нет заказов'}

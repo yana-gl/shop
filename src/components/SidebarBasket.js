@@ -14,14 +14,14 @@ function SidebarBasket({onCancelItem, onCancel, items = [], opened}) {
 
     const onClickOrder = async () => {
         try {
-            const { data } = await axios.post('https://61dd2912591c3a0017e1ac5d.mockapi.io/Orders', {items: basketItems});
+            const { data } = await axios.post('https://61f53c3462f1e300173c4066.mockapi.io/Orders', {items: basketItems});
             setOrderId(data.id);
             setIsOrderCompleted(true);
             setBasketItems([]);
     
             for (let i = 0; i < basketItems.length; i++) {
                 const item = basketItems[i];
-                await axios.delete('https://61dd2912591c3a0017e1ac5d.mockapi.io/BasketItems/' + item.basketId);
+                await axios.delete('https://61f53c3462f1e300173c4066.mockapi.io/BasketItems/' + item.basketId);
                 //await delay(1000);
             }
         } catch (error) {

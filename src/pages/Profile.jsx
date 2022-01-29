@@ -11,7 +11,7 @@ function Profile() {
         () => {
             async function getResponseFromServer() {
                 try {
-                    const ordersResponse = await axios.get("https://61f53c3462f1e300173c4066.mockapi.io/Orders");
+                    const ordersResponse = await axios.get("https://61f53c3462f1e300173c4065.mockapi.io/Orders");
                     setOrders(ordersResponse.data);
                     console.log(orders);
                     
